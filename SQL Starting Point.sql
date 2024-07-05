@@ -35,3 +35,23 @@ FROM employee_demographics;
 
 SELECT distinct first_name, gender
 FROM employee_demographics;
+
+-- GROUP BY 
+
+SELECT gender, AVG(age), MAX(age), MIN(age), COUNT(age)
+FROM employee_demographics
+GROUP BY gender;
+
+-- ORDER BY
+
+SELECT *
+FROM employee_demographics
+ORDER BY first_name;
+
+# by default it is a ASC ORDER
+
+SELECT *
+FROM employee_demographics
+ORDER BY gender, age DESC;
+
+# The order of the ORDER BY is important, if we use the age first, it won't order by gender because of the unique values of age
