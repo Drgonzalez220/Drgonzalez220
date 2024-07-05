@@ -55,3 +55,10 @@ FROM employee_demographics
 ORDER BY gender, age DESC;
 
 # The order of the ORDER BY is important, if we use the age first, it won't order by gender because of the unique values of age
+
+-- HAVING vs WHERE
+
+SELECT gender, AVG(age)
+FROM employee_demographics
+GROUP BY gender
+HAVING AVG(age) > 40;
