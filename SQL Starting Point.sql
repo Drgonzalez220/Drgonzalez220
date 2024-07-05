@@ -28,7 +28,7 @@ age,
 (age + 10) * 10 + 10
 FROM employee_demographics;
 
--- Distinct
+-- DISTINCT
 
 SELECT distinct gender
 FROM employee_demographics;
