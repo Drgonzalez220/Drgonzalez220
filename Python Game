@@ -1,0 +1,26 @@
+# Learning by coding this game:
+# The game consists of guessing a number that the computer picked between 1 and 100
+
+from random import randint
+min_number = 1
+max_number = 100
+
+min_games = 1
+max_games = 5
+
+#Asking for the number of games to the user:
+while True:
+    try:
+        num_games = int(input("How many games do you want to play? Between 1 and 5: "))
+        if num_games > max_games or num_games < min_games:
+            print("Sorry, that's out of range. Try again.")
+            continue
+        break
+    except ValueError:
+        print("Sorry, that's not a valid number. Please try again.")
+
+# this is the looping of games
+for game_number in range(num_games):
+    print("\nGame ", game_number + 1)
+    computer_guess_number = randint(min_number, max_number)
+    print("Computer Guess: ", computer_guess_number)
